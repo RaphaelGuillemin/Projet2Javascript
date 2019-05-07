@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{titre}}</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/results.css" />
+    </head>
+    <body>
+        <h1>{{titre}}</h1>
+        <h2>Résultats du sondage</h2>
+        <p><a href="{{url}}">Répondre à nouveau</a></p>
+        <p><a href="/">Créer un nouveau sondage</a></p>
+
+        <div id="table-container">
+            {{table}}
+        </div>
+
+        <div id="legende">
+            <h2>Légende</h2>
+            <ul>
+                {{legende}}
+            </ul>
+        </div>
+    </body>
+</html>

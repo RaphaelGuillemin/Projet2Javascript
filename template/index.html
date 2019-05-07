@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Créer un sondage</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <link rel="stylesheet" type="text/css" href="pickmeup.css" />
+        <script type="text/javascript" src="pickmeup.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                ["debut", "fin"].forEach(function(x) {
+                    var options = {
+                        position: 'right',
+                        hide_on_select: true,
+                        format: 'Y-m-d'
+                    };
+
+                    if(x == 'fin') {
+                        var date = new Date();
+                        date.setDate(new Date().getDate() + 5);
+                        options.date = date;
+                    }
+
+                    pickmeup('#' + x, options);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Créer un sondage</h1>
+
+        <div id="error">
+            Erreur : assurez-vous d'entrer des données valides.
+        </div>
+
+        <form action="/" method="GET">
+            <label>
+                Titre:
+                <input name="titre" placeholder="Super Sondage" />
+            </label>
+
+            <br />
+
+            <label>
+                Identifiant:
+                <input name="id" placeholder="super-sondage" />
+                <attr id="note-identifiant" title="L'identifiant du sondage sera utilisé dans le lien. Il doit être composé seulement de chiffres, de lettres et de tirets (-)">(?)</attr>
+            </label>
+
+            <br />
+
+            <label>
+                Date de début:
+                <input id="debut" name="dateDebut" />
+            </label>
+
+            <br />
+
+            <label>
+                Date de fin:
+                <input id="fin" name="dateFin" />
+            </label>
+
+            <br />
+
+            <label>
+                Heure de début:
+                <select name="heureDebut">
+                    <option value="0">0h</option>
+                    <option value="1">1h</option>
+                    <option value="2">2h</option>
+                    <option value="3">3h</option>
+                    <option value="4">4h</option>
+                    <option value="5">5h</option>
+                    <option value="6">6h</option>
+                    <option value="7" selected>7h</option>
+                    <option value="8">8h</option>
+                    <option value="9">9h</option>
+                    <option value="10">10h</option>
+                    <option value="11">11h</option>
+                    <option value="12">12h</option>
+                    <option value="13">13h</option>
+                    <option value="14">14h</option>
+                    <option value="15">15h</option>
+                    <option value="16">16h</option>
+                    <option value="17">17h</option>
+                    <option value="18">18h</option>
+                    <option value="19">19h</option>
+                    <option value="20">20h</option>
+                    <option value="21">21h</option>
+                    <option value="22">22h</option>
+                    <option value="23">23h</option>
+                </select>
+            </label>
+
+            <br />
+
+            <label>
+                Heure de fin:
+                <select name="heureFin">
+                    <option value="0">0h</option>
+                    <option value="1">1h</option>
+                    <option value="2">2h</option>
+                    <option value="3">3h</option>
+                    <option value="4">4h</option>
+                    <option value="5">5h</option>
+                    <option value="6">6h</option>
+                    <option value="7">7h</option>
+                    <option value="8">8h</option>
+                    <option value="9">9h</option>
+                    <option value="10">10h</option>
+                    <option value="11">11h</option>
+                    <option value="12">12h</option>
+                    <option value="13">13h</option>
+                    <option value="14">14h</option>
+                    <option value="15">15h</option>
+                    <option value="16">16h</option>
+                    <option value="17" selected>17h</option>
+                    <option value="18">18h</option>
+                    <option value="19">19h</option>
+                    <option value="20">20h</option>
+                    <option value="21">21h</option>
+                    <option value="22">22h</option>
+                    <option value="23">23h</option>
+                </select>
+            </label>
+
+            <hr />
+
+            <button type="submit">
+                Créer !
+            </button>
+        </form>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                if(location.search == '') {
+                    document.getElementById('error').style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+</html>

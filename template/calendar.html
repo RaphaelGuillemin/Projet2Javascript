@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{titre}}</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="/calendar.css" />
+        <script src="/calendar.js"></script>
+    </head>
+    <body>
+        <h1>{{titre}}</h1>
+
+        {{table}}
+
+        <form id="soumettre" action="" method="GET">
+            <label>
+                Nom:
+                <input id="nom" name="nom" type="text" required />
+            </label>
+
+            <input id="disponibilites" name="disponibilites" type="hidden" />
+
+            <button type="submit" onclick="document.getElementById('disponibilites').value = compacterDisponibilites()">
+                Participer
+            </button>
+        </form>
+
+        <p id="partager">Partagez ce sondage en utilisant le lien suivant : {{url}}</p>
+    </body>
+</html>

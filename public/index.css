@@ -1,0 +1,29 @@
+body {
+    font-family: 'Sans';
+}
+h1 {
+    text-align: center;
+}
+#error {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #FF000050;
+    padding: 15px;
+    background-color: #FF000010;
+}
+#note-identifiant {
+    border-bottom: 1px dotted #900;
+    font-size: small;
+}
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+input, select {
+    margin-left: 5px;
+}
+button {
+    font-size: large;
+}

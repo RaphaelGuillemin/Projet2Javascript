@@ -1,0 +1,48 @@
+body {
+    font-family: 'Sans';
+}
+h1, h2 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+#table-container {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    overflow-x: auto;
+}
+table {
+    margin: 30px auto;
+}
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+td.max {
+    border: 1px dotted green;
+    background-color: lightgreen;
+}
+td.min {
+    border: 1px dotted red;
+    background-color: lightpink;
+}
+#partager {
+    margin-top: 30px;
+    font-style: italic;
+    text-align: center;
+}
+#soumettre {
+    text-align: center;
+}
+#legende {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+#legende li {
+    color: white;
+    padding: 10px;
+}
